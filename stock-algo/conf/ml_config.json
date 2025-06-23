@@ -1,0 +1,74 @@
+{
+    "technicals": {
+        "cols_to_scale": {
+            "type": "robust",
+            "features": [
+                "open", "high", "low", "close", "volume",
+                "EMA10", "EMA20", "EMA50", "EMA100", "EMA250",
+                "KAMA20", "twoWeekTrendLine", "monthTrendLine",
+                "threeMonthTrendLine", "sixMonthTrendLine", "yearTrendLine",
+                "threeYearTrendLine", "prevailingTrendLine", "twoWeekTrend",
+                "monthTrend", "threeMonthTrend", "sixMonthTrend", "yearTrend",
+                "threeYearTrend", "prevailingTrend", "priceChange", "priceCeiling",
+                "priceFloor", "kalmanClose", "percentDiffMax", "percentDiffMin",
+                "STDevPercent20", "bollingerUpper20", "bollingerSMA20", "bollingerLower20",
+                "bollingerRange20", "parabolicSAR", "OBV",
+
+            ]
+        },
+        "cols_to_bin": {
+            "type": "default",
+            "features": [
+                "open", "high", "low", "close", "volume",
+                "EMA10", "EMA20", "EMA50", "EMA100", "EMA250",
+                "KAMA20", "priceChange", "priceCeiling",
+                "priceFloor", "kalmanClose", "bollingerUpper20",
+                "bollingerSMA20", "bollingerLower20",
+                "bollingerRange20", "parabolicSAR", "OBV",
+
+            ]
+        },
+        "cols_to_lag": {
+            "lag_periods": [
+                1, 2, 3, 5
+            ],
+            "features": [
+                "close", "kalmanClose"
+            ]
+        },
+        "cols_to_roll": {
+            "windows": [
+                5, 10, 20
+            ]
+        },
+        "features": [
+            "volume", "OBV"
+        ]
+    },
+    "fundamentals": {
+        "cols_to_scale": {
+            "type": "robust",
+            "features": [
+                "cashAndEq", "debt", "equity",
+                "retainedEarnings", "totalAssets",
+                "totalLiabilities", "capex", "consolidatedIncome",
+                "costRev", "ebit", "ebitda", "ebt",
+                "grossProfit", "netinc", "opex", "opinc",
+                "revenue", "rnd", "sga", "taxExp"
+            ],
+        },
+        "cols_to_roll": {
+            "windows": [
+                4
+            ],
+            "features": [
+                "cashAndEq", "debt", "equity",
+                "retainedEarnings", "totalAssets",
+                "totalLiabilities", "capex", "consolidatedIncome",
+                "costRev", "ebit", "ebitda", "ebt",
+                "grossProfit", "netinc", "opex", "opinc",
+                "revenue", "rnd", "sga", "taxExp"
+            ]
+        }
+    }
+}
